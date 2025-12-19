@@ -1,70 +1,44 @@
-# React Git Tutorial
+# Interactive Git Learning Platform
 
-[![Commit Activity](https://img.shields.io/github/commit-activity/m/aftongauntlett/react-tutorial)](https://github.com/aftongauntlett/react-tutorial/commits)
-[![Status](https://img.shields.io/badge/Status-In%20Development-orange)](https://github.com/aftongauntlett/react-tutorial)
-[![License](https://img.shields.io/badge/License-MIT-blue)](https://opensource.org/licenses/MIT)
+A narrative-driven git tutorial application that transforms learning into an engaging, game-like experience. Built with modern React patterns and inspired by The Stanley Parable's storytelling approach.
 
-An interactive git learning platform with Stanley Parable-inspired theming. Built to demonstrate advanced React patterns, game-inspired UI design, and accessibility-first development through immersive narrative-driven tutorials.
+## Overview
 
-**Live Demo**: [react-tutorial-demo.vercel.app](https://react-tutorial-demo.vercel.app)
+This project demonstrates expertise in building immersive educational interfaces by combining technical education with interactive storytelling. Users learn git commands through a simulated terminal with real-time feedback, guided by a dynamic narrator that adapts to their actions.
 
-## Features
+## Key Features
 
-- **Interactive Terminal**: Simulated git command-line interface with real-time feedback and help system
-- **Character-Driven Theming**: Multiple theme options including Stanley Parable's Narrator experience
-- **Narrative Learning**: Story-based tutorials that make git concepts engaging and memorable
-- **Smart State Management**: Zustand-powered tutorial progression with achievement tracking
-- **Game-Style UI**: Retro office aesthetics with smooth animations and transitions
-- **Accessibility First**: Keyboard navigation, screen reader support, and reduced motion preferences
-- **3D Elements**: Three.js integration for immersive visual experiences
-- **Responsive Design**: Optimized for desktop learning experience
+- **Interactive Terminal Simulation** — Custom git command parser with contextual help and intelligent feedback
+- **Narrative-Driven UI** — Story-based learning approach inspired by The Stanley Parable
+- **Dynamic Theming** — Character-driven visual experiences with smooth transitions
+- **Achievement System** — Progress tracking with Zustand state management
+- **3D Visual Elements** — Three.js integration for enhanced immersion
+- **Accessibility Focus** — Full keyboard navigation, screen reader support, and motion preferences
 
 ## Tech Stack
 
-**Frontend**: React 19, TypeScript, Vite, TailwindCSS, Framer Motion, Zustand  
+**Core**: React 19, TypeScript, Vite, TailwindCSS  
+**State & Animation**: Zustand, Framer Motion, React Spring  
 **3D Graphics**: Three.js, React Three Fiber, React Three Drei  
-**Animation**: Framer Motion, React Spring, Lottie  
 **Testing**: Vitest, React Testing Library
 
-## Quick Start
+## Technical Implementation
+
+- **Modern React Architecture**: Leverages React 19 features with TypeScript for type-safe component composition
+- **Modular Design**: Reusable component primitives with theme variants and shared UI patterns
+- **Custom Hooks**: Abstracted logic for narrator timing, responsive behavior, and user interactions
+- **CSS Custom Properties**: Dynamic theme system enabling runtime style switching
+- **Error Boundaries**: Graceful degradation with user-friendly error recovery
+- **Performance Optimized**: Code splitting, lazy loading, and memoization strategies
+
+## Development
 
 ```bash
-git clone https://github.com/aftongauntlett/react-tutorial.git
-cd react-tutorial
 npm install
-
-npm run dev
+npm run dev        # Development server at localhost:5173
+npm run build      # Production build
+npm run preview    # Preview production build
 ```
-
-Open [http://localhost:5173](http://localhost:5173) to start learning.
-
-## Technical Highlights
-
-- **React 19**: Latest features with modern patterns and performance optimizations
-- **TypeScript**: Full type safety across components, state, and utilities
-- **Component Architecture**: Modular design with shared UI primitives and theme variants
-- **State Management**: Zustand stores for tutorial progress and achievement tracking
-- **Terminal Simulation**: Custom git command parser with real-time feedback
-- **Theme System**: CSS custom properties enabling dynamic character-based styling
-- **Custom Hooks**: Reusable logic for narrator timing, screen detection, and interactions
-- **Error Boundaries**: Graceful error handling with user-friendly recovery
-
-## Available Scripts
-
-```bash
-npm run dev              # Start development server
-npm run build            # Production build
-npm run preview          # Preview production build
-```
-
-## Roadmap
-
-Future features under consideration:
-
-- **Additional Themes**: Portal (GLaDOS, Wheatley, Space Core) and Half-Life (G-Man) character experiences
-- **Advanced Git Topics**: Branching strategies, merge conflicts, rebasing, and collaboration workflows
-- **Achievement System**: Gamified progression with unlockable content
-- **Community Features**: Share progress and compete on tutorial completion times
 
 ## License
 
@@ -79,4 +53,3 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ---
 
 Built by [Afton Gauntlett](https://www.aftongauntlett.com/)
-- Reinforce Git/GitHub usage for version control
