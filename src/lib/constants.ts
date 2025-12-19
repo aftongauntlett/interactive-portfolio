@@ -190,35 +190,3 @@ export const STORAGE_KEYS = {
   SETTINGS: 'settings',
   ACHIEVEMENTS: 'achievements',
 } as const;
-
-// ===========================
-// API ENDPOINTS (for future use)
-// ===========================
-
-export const API_ENDPOINTS = {
-  PROGRESS: '/api/progress',
-  ACHIEVEMENTS: '/api/achievements',
-  LEADERBOARD: '/api/leaderboard',
-} as const;
-
-// ===========================
-// ERROR MESSAGES
-// ===========================
-
-export const ERROR_MESSAGES = {
-  GENERIC: 'Something went wrong. Please try again.',
-  NETWORK: 'Network error. Please check your connection.',
-  NOT_FOUND: 'The requested resource was not found.',
-  UNAUTHORIZED: 'You are not authorized to perform this action.',
-  VALIDATION: 'Please check your input and try again.',
-} as const;
-
-// ===========================
-// SUCCESS MESSAGES
-// ===========================
-
-export const SUCCESS_MESSAGES = {
-  PROGRESS_SAVED: 'Your progress has been saved.',
-  ACHIEVEMENT_UNLOCKED: 'Achievement unlocked!',
-  LEVEL_COMPLETED: 'Level completed successfully!',
-} as const;
