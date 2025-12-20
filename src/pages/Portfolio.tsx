@@ -1,19 +1,19 @@
-import StanleyMenu from '@/components/room-427/StanleyMenu';
-import GitTerminalPanel from '@/components/room-427/GitTerminalPanel';
-import ThemedBreakoutTerminal from '@/components/room-427/ThemedBreakoutTerminal';
-import InteractiveMonitor from '@/components/room-427/InteractiveMonitor';
-import NarratorOverlay from '@/components/room-427/NarratorOverlay';
-import OfficePhone from '@/components/room-427/OfficePhone';
+import StanleyMenu from '@/components/portfolio/StanleyMenu';
+import GitTerminalPanel from '@/components/portfolio/GitTerminalPanel';
+import ThemedBreakoutTerminal from '@/components/portfolio/ThemedBreakoutTerminal';
+import InteractiveMonitor from '@/components/portfolio/InteractiveMonitor';
+import NarratorOverlay from '@/components/portfolio/NarratorOverlay';
+import OfficePhone from '@/components/portfolio/OfficePhone';
 import { useIsSmallScreen } from '@/hooks/useIsSmallScreen';
 import { useSimulationStore } from '@/lib/state/simulationStore';
 import { useState, useRef, useEffect } from 'react';
 
 /**
- * The Room427 component is the main entry view for the Stanley Parable scenario.
+ * The Portfolio component is the main portfolio entry view featuring the Stanley Parable aesthetic.
  * It renders a 16:9 fixed aspect layout with an interactive terminal,
- * narrator intro text, and the start menu UI.
+ * narrator text, and the start menu UI.
  */
-export default function Room427() {
+export default function Portfolio() {
   /** Controls when to show the full-screen terminal (after intro completes) */
   const [showFullTerminal, setShowFullTerminal] = useState(false);
 
@@ -32,34 +32,13 @@ export default function Room427() {
   /** Simulation state from store */
   const { phase, isMonitorOn, turnOnMonitor } = useSimulationStore();
 
-  // Warn user about losing progress when navigating away
-  useEffect(() => {
-    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
-      if (phase !== 'idle' && phase !== 'complete') {
-        const message =
-          "Are you sure? Your progress will be lost... you will have to start from the beginning? Employee 427 doesn't usually abandon his work mid-task, but I suppose even the most dedicated employees have their limits.";
-        e.preventDefault();
-        e.returnValue = message;
-        return message;
-      }
-    };
-
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
-  }, [phase]);
-
   /**
-   * Called when the git learning sequence completes.
+   * Called when the git terminal sequence completes.
    */
   const handleComplete = () => {
     if (showFullTerminal) return;
     setTimeout(() => setShowFullTerminal(true), 3000);
   };
-
-  // Optional dev log for mobile experience skipping logic
-  if (isSmallScreen && !terminalStarted) {
-    console.log("Skipping main menu. Stanley's screen was... tragically small.");
-  }
 
   return (
     <section className="relative w-full min-h-screen bg-black text-[var(--color-text)] font-barlow flex items-center justify-center">

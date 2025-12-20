@@ -12,14 +12,14 @@ export const narratorLines = {
   ],
   monitorActive: [
     'The monitor flickered to life.',
-    'Stanley would begin his work.',
-    'This was what he was meant to do.',
+    'Stanley would begin his exploration.',
+    'This was what he was here to see.',
   ],
   monitorIdle: [
     'Stanley stared at the monitor.',
     'Perhaps he should type something... like "git status" or "options".',
-    "Stanley's job was simple: he sat at his desk and he pushed buttons on his keyboard as he was told.",
-    'But Stanley seemed to have forgotten how to push buttons. How peculiar.',
+    "Stanley's task was simple: he sat at his desk and he interacted with his terminal as expected.",
+    'But Stanley seemed to have forgotten how to type. How peculiar.',
     'Was Stanley perhaps waiting for more specific instructions? Try typing "help" or "git status".',
   ],
   terminalBreakout: [
@@ -33,9 +33,9 @@ export const narratorLines = {
     'Order has been restored.',
   ],
   assessment: [
-    'Stanley had learned much.',
-    'But was he ready for what came next?',
+    'Stanley had explored much.',
+    'But was he satisfied with what he had found?',
     'Time would tell.',
   ],
-  complete: ['And Stanley completed his training.', 'He was ready.', 'Or was he?'],
+  complete: ['And Stanley completed his journey.', 'He was satisfied.', 'Or was he?'],
 };

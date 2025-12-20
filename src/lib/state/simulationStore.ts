@@ -1,33 +1,31 @@
 import { create } from 'zustand';
 
 /**
- * Simulation phases following Stanley Parable narrative structure
+ * Experience phases following Stanley Parable narrative structure
  */
 export type SimulationPhase =
   | 'idle' // Initial state - monitor off, phone gray
   | 'phone-active' // Phone red dot flashing, narrator introduction
-  | 'monitor-active' // Monitor on, programming questions
-  | 'settings-active' // Settings menu open, CSS learning
-  | 'assessment' // Post-settings questions
+  | 'monitor-active' // Monitor on, portfolio exploration
+  | 'settings-active' // Settings menu open, easter egg exploration
+  | 'assessment' // Post-settings exploration
   | 'terminal-breakout' // Terminal breaks out of monitor onto wall
   | 'terminal-restore' // Terminal returns to monitor
-  | 'complete'; // Interview complete
+  | 'complete'; // Experience complete
 
 /**
  * User progress tracking for personalized experience
  */
 interface UserProgress {
-  questionsAnswered: number;
   settingsExplored: string[]; // Track which settings were touched
-  assessmentScore: number;
 }
 
 /**
- * Main simulation state interface
- * Manages the Room 427 Stanley Parable experience
+ * Main experience state interface
+ * Manages the Room 427 Stanley Parable portfolio experience
  */
 interface SimulationState {
-  // Current simulation phase
+  // Current experience phase
   phase: SimulationPhase;
 
   // UI component states
@@ -44,7 +42,7 @@ interface SimulationState {
   idleTimerId: number | null;
   idleContext: 'phone' | 'monitor' | null;
 
-  // Core simulation actions
+  // Core experience actions
   setPhase: (phase: SimulationPhase) => void;
   startSimulation: () => void;
   activatePhone: () => void;
@@ -70,7 +68,7 @@ interface SimulationState {
 }
 
 /**
- * Zustand store for simulation state management
+ * Zustand store for portfolio experience state management
  * Centralized state following clean architecture principles
  */
 export const useSimulationStore = create<SimulationState>((set, get) => ({
@@ -82,9 +80,7 @@ export const useSimulationStore = create<SimulationState>((set, get) => ({
   currentNarratorText: '',
   currentQuestion: '',
   userProgress: {
-    questionsAnswered: 0,
     settingsExplored: [],
-    assessmentScore: 0,
   },
   idleTimerId: null,
   idleContext: null,
@@ -105,7 +101,7 @@ export const useSimulationStore = create<SimulationState>((set, get) => ({
       phase: 'phone-active',
       isPhoneFlashing: false,
       currentNarratorText:
-        "Ah, Stanley. So good of you to finally pick up the phone. I do hope you're prepared for what promises to be... an enlightening interview experience.",
+        "Ah, Stanley. So good of you to finally pick up the phone. I do hope you're prepared for what promises to be... an enlightening experience.",
     });
   },
 
@@ -114,7 +110,7 @@ export const useSimulationStore = create<SimulationState>((set, get) => ({
       phase: 'monitor-active',
       isMonitorOn: true,
       currentNarratorText:
-        'Stanley stared at his monitor, which had mysteriously come to life. Perhaps now he could demonstrate the extent of his... programming prowess.',
+        'Stanley stared at his monitor, which had mysteriously come to life. Perhaps now he could demonstrate something... interesting.',
     });
   },
 
@@ -156,7 +152,7 @@ export const useSimulationStore = create<SimulationState>((set, get) => ({
       phase: 'complete',
       isMonitorOn: false,
       currentNarratorText:
-        "And so Stanley's interview came to an end. Whether he had learned anything meaningful was... debatable. But at least he had clicked some buttons. That counts for something, surely.",
+        "And so Stanley's experience came to an end. Whether he had discovered anything meaningful was... debatable. But at least he had clicked some buttons. That counts for something, surely.",
     });
   },
 
@@ -179,7 +175,6 @@ export const useSimulationStore = create<SimulationState>((set, get) => ({
     set({
       userProgress: {
         ...state.userProgress,
-        questionsAnswered: state.userProgress.questionsAnswered + 1,
       },
     });
   },

@@ -4,10 +4,10 @@
  */
 
 // ===========================
-// GAME CONFIGURATION
+// APP CONFIGURATION
 // ===========================
 
-export const GAME_CONFIG = {
+export const APP_CONFIG = {
   TYPING_SPEED: 50,
   TERMINAL_DELAYS: {
     BOOT: 2000,
@@ -56,12 +56,8 @@ export const THEME_COLORS = {
   terminalText: 'var(--color-terminal-text)',
   terminalPrompt: 'var(--color-terminal-prompt)',
 
-  // Game character colors
+  // Character colors
   stanleyYellow: 'var(--color-stanley-yellow)',
-  wheatleyBlue: 'var(--color-wheatley-blue)',
-  apertureOrange: 'var(--color-aperture-orange)',
-  gladosGreen: 'var(--color-glados-green)',
-  gmanPurple: 'var(--color-gman-purple)',
 } as const;
 
 // ===========================
@@ -96,28 +92,16 @@ export const TERMINAL_COMMANDS = {
 } as const;
 
 // ===========================
-// ROOM/LEVEL IDENTIFIERS
+// PORTFOLIO IDENTIFIER
 // ===========================
 
-export const ROOM_IDS = {
-  ROOM_427: 'room-427',
-  APERTURE_SCIENCE: 'aperture-science',
-  BLACK_MESA: 'black-mesa',
-  SPACE: 'space',
-  FINAL_BOSS: 'final-boss',
-} as const;
+export const PORTFOLIO_ID = 'room-427' as const;
 
 // ===========================
-// CHARACTER THEMES
+// CHARACTER THEME
 // ===========================
 
-export const CHARACTER_THEMES = {
-  STANLEY: 'theme-stanley',
-  NARRATOR: 'theme-stanley', // Same as Stanley
-  WHEATLEY: 'theme-wheatley',
-  GLADOS: 'theme-glados',
-  GMAN: 'theme-gman',
-} as const;
+export const CHARACTER_THEME = 'theme-stanley' as const;
 
 // ===========================
 // TERMINAL THEMES

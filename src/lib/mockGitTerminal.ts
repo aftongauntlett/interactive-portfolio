@@ -1,5 +1,5 @@
 /**
- * Mock Git Terminal - Simulates git command responses for learning
+ * Mock Git Terminal - Simulates git command responses for portfolio experience
  */
 
 export interface TerminalCommand {
@@ -28,7 +28,7 @@ export interface GitRepository {
   }>;
 }
 
-// Initial repository state for the learning scenario
+// Initial repository state for the portfolio scenario
 export const initialRepoState: GitRepository = {
   currentBranch: 'main',
   branches: ['main', 'feature/user-auth'],

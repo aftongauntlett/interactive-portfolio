@@ -47,13 +47,9 @@
   --color-card-border: var(--color-line);
   --color-card-hover: var(--color-primary);
 
-  /* Game-specific colors */
+  /* Character-specific colors */
   --color-stanley-yellow: #facc15;
   --color-stanley-yellow-hover: #eab308;
-  --color-wheatley-blue: #3b82f6;
-  --color-aperture-orange: #f97316;
-  --color-glados-green: #10b981;
-  --color-gman-purple: #8b5cf6;
 
   /* Z-Index Scale */
   --z-base: 1;
@@ -64,29 +60,11 @@
   --z-toast: 50;
 }
 
-/* Game Character Themes */
+/* Stanley Theme */
 .theme-stanley {
   --color-primary: var(--color-stanley-yellow);
   --color-primary-hover: var(--color-stanley-yellow-hover);
   --color-accent: #1f2937;
-}
-
-.theme-wheatley {
-  --color-primary: var(--color-wheatley-blue);
-  --color-primary-hover: #2563eb;
-  --color-accent: #f3f4f6;
-}
-
-.theme-glados {
-  --color-primary: var(--color-aperture-orange);
-  --color-primary-hover: #ea580c;
-  --color-accent: var(--color-glados-green);
-}
-
-.theme-gman {
-  --color-primary: var(--color-gman-purple);
-  --color-primary-hover: #7c3aed;
-  --color-accent: #374151;
 }
 
 /* Base Styles */

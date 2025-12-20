@@ -260,7 +260,7 @@ This is a common scenario in collaborative development!`,
         {/* Status bar */}
         <div className="border-t border-gray-700 px-4 py-2 bg-gray-900 text-xs text-gray-400">
           <div className="flex justify-between">
-            <span>Stanley's Git Learning Terminal</span>
+            <span>Stanley's Git Terminal</span>
             <span>Type 'help' for Git Assistant</span>
           </div>
         </div>

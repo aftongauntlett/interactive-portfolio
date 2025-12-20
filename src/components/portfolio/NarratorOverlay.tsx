@@ -14,7 +14,7 @@ export default function NarratorOverlay() {
   const narratorSequences: Record<string, string[]> = {
     'phone-active': [
       'Ah, Stanley. So good of you to finally pick up the phone.',
-      "I do hope you're prepared for what promises to be... an enlightening interview experience.",
+      "I do hope you're prepared for what promises to be... an enlightening experience.",
       'You see, Stanley, we need to assess your... capabilities.',
     ],
     'monitor-active': [

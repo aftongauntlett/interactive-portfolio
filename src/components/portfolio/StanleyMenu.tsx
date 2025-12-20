@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import { type JSX, useState } from 'react';
 import { useSimulationStore } from '@/lib/state/simulationStore';
 import { cn, TRANSITION_FAST } from '@/constants/styles';
@@ -52,16 +51,15 @@ export interface StanleyMenuProps {
 }
 
 /**
- * Main menu component for Room 427 Stanley Parable experience
- * Handles simulation state and user interactions
+ * Main menu component for the Stanley Parable portfolio experience
+ * Handles portfolio exploration state and user interactions
  */
 export default function StanleyMenu({ terminalStarted, setTerminalStarted }: StanleyMenuProps) {
-  const navigate = useNavigate();
   const [showOptions, setShowOptions] = useState(false);
   const { phase, startSimulation, openSettings } = useSimulationStore();
 
   /**
-   * Handles starting the simulation experience
+   * Handles starting the portfolio experience
    */
   const handleBeginSimulation = () => {
     if (phase === 'idle') {
@@ -74,29 +72,15 @@ export default function StanleyMenu({ terminalStarted, setTerminalStarted }: Sta
   };
 
   /**
-   * Handles opening settings modal or in-simulation settings
+   * Handles opening settings modal or in-experience settings
    */
   const handleOpenSettings = () => {
     if (phase === 'monitor-active') {
-      // In-simulation settings (part of the narrative)
+      // In-experience settings (part of the narrative)
       openSettings();
     } else {
-      // Pre-simulation options modal
+      // Pre-experience options modal
       setShowOptions(true);
-    }
-  };
-
-  /**
-   * Handles quit action with Stanley Parable style confirmation
-   */
-  const handleQuit = () => {
-    const confirmMessage =
-      'Are you sure? Your progress will be lost... you will have to start from the beginning? ' +
-      "Employee 427 doesn't usually quit his work, but I suppose even the most dedicated " +
-      'employees have their limits.';
-
-    if (window.confirm(confirmMessage)) {
-      navigate('/');
     }
   };
 
@@ -106,19 +90,19 @@ export default function StanleyMenu({ terminalStarted, setTerminalStarted }: Sta
   const getButtonLabel = (): string => {
     switch (phase) {
       case 'idle':
-        return 'Begin the Review';
+        return 'Begin the Experience';
       case 'phone-active':
         return 'Answer the phone...';
       case 'monitor-active':
-        return 'PR In Progress…';
+        return 'Experience In Progress…';
       case 'settings-active':
         return 'Exploring settings...';
       case 'assessment':
-        return 'Assessment in progress...';
+        return 'Exploration in progress...';
       case 'complete':
-        return 'Interview Complete';
+        return 'Experience Complete';
       default:
-        return terminalStarted ? 'Simulation in progress...' : 'Begin Merge Review';
+        return terminalStarted ? 'Experience in progress...' : 'Begin Experience';
     }
   };
 
@@ -133,7 +117,7 @@ export default function StanleyMenu({ terminalStarted, setTerminalStarted }: Sta
     <>
       <nav
         className="flex flex-col gap-6 text-[var(--color-text)]"
-        aria-label="Stanley Parable main menu"
+        aria-label="Stanley Parable portfolio menu"
         role="navigation"
       >
         <MenuItem
@@ -142,8 +126,7 @@ export default function StanleyMenu({ terminalStarted, setTerminalStarted }: Sta
           disabled={isButtonDisabled()}
         />
         <MenuItem label="Options" onClick={handleOpenSettings} />
-        <MenuItem label="View MR" disabled />
-        <MenuItem label="Quit" onClick={handleQuit} />
+        <MenuItem label="Projects" disabled />
       </nav>
 
       {/* Options Modal */}

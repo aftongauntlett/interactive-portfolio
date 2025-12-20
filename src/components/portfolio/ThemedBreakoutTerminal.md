@@ -1,11 +1,11 @@
 # Themed Breakout Terminal Component
 
-A reusable terminal component that can be themed for different game scenarios in the Stanley Parable-inspired coding interview app.
+A reusable terminal component that can be themed for different scenarios in the Stanley Parable-inspired portfolio experience.
 
 ## Usage
 
 ```tsx
-import ThemedBreakoutTerminal from '@/components/room-427/ThemedBreakoutTerminal';
+import ThemedBreakoutTerminal from '@/components/portfolio/ThemedBreakoutTerminal';
 
 // Stanley Parable theme (retro CRT style)
 <ThemedBreakoutTerminal

@@ -44,77 +44,9 @@ export const narratorThemes: Record<string, NarratorTheme> = {
     glow: 'none',
     glowIntensity: 'none',
   },
-
-  // G-Man - Blue/cyan government terminal aesthetic
-  gman: {
-    primary: '#00ccff',
-    secondary: '#0088cc',
-    background: '#001122',
-    text: '#00ccff',
-    textMuted: '#0066aa',
-    line: '#003366',
-
-    cursor: '#00ddff',
-    selection: '#00ccff30',
-    prompt: '#00ccff',
-    command: '#00ccff',
-    output: '#0099cc',
-    error: '#ff3366',
-    warning: '#ffaa33',
-    success: '#00ff88',
-
-    glow: '#00ccff',
-    glowIntensity: '0 0 5px #00ccff, 0 0 10px #00ccff40',
-  },
-
-  // Wheatley - Orange/warm Portal 2 aesthetic
-  wheatley: {
-    primary: '#ff6600',
-    secondary: '#cc4400',
-    background: '#1a0f00',
-    text: '#ff8833',
-    textMuted: '#cc5500',
-    line: '#663300',
-
-    cursor: '#ff7722',
-    selection: '#ff660030',
-    prompt: '#ff6600',
-    command: '#ff8833',
-    output: '#ee7711',
-    error: '#ff2244',
-    warning: '#ffcc00',
-    success: '#66ff33',
-
-    glow: '#ff6600',
-    glowIntensity: '0 0 5px #ff6600, 0 0 10px #ff660040',
-  },
-
-  // GLaDOS - Clean white/blue Portal aesthetic
-  glados: {
-    primary: '#ffffff',
-    secondary: '#cccccc',
-    background: '#0d1117',
-    text: '#ffffff',
-    textMuted: '#888888',
-    line: '#333333',
-
-    cursor: '#ffffff',
-    selection: '#ffffff20',
-    prompt: '#ffffff',
-    command: '#ffffff',
-    output: '#cccccc',
-    error: '#ff4757',
-    warning: '#ffa502',
-    success: '#2ed573',
-
-    glow: '#ffffff',
-    glowIntensity: '0 0 3px #ffffff, 0 0 6px #ffffff20',
-  },
 };
 
 // Helper function to get current theme
 export const getNarratorTheme = (narrator: keyof typeof narratorThemes): NarratorTheme => {
   return narratorThemes[narrator] || narratorThemes.narrator;
 };
-
-// Helper function to get shell prompt styling
