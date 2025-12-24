@@ -90,19 +90,19 @@ export default function StanleyMenu({ terminalStarted, setTerminalStarted }: Sta
   const getButtonLabel = (): string => {
     switch (phase) {
       case 'idle':
-        return 'Begin the Experience';
+        return 'Begin the Game';
       case 'phone-active':
         return 'Answer the phone...';
       case 'monitor-active':
-        return 'Experience In Progress…';
+        return 'In Progress…';
       case 'settings-active':
         return 'Exploring settings...';
       case 'assessment':
         return 'Exploration in progress...';
       case 'complete':
-        return 'Experience Complete';
+        return 'Complete';
       default:
-        return terminalStarted ? 'Experience in progress...' : 'Begin Experience';
+        return terminalStarted ? 'In progress...' : 'Begin the Game';
     }
   };
 

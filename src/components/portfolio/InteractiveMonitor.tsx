@@ -114,7 +114,7 @@ export default function InteractiveMonitor({
       <div className="h-full flex flex-col">
         {/* Terminal header */}
         <div className="flex items-center mb-2">
-          <div style={{ color: theme.textMuted }}>427@terminal:~$</div>
+          <div style={{ color: theme.textMuted }}>428@terminal:~$</div>
         </div>
 
         {/* Command history with themed scrollbar */}

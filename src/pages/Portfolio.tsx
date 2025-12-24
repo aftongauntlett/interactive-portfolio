@@ -90,10 +90,10 @@ export default function Portfolio() {
         {/* Page title (top-left corner) */}
         <div className="absolute top-12 left-20 z-10">
           <p className="text-white font-barlow font-light text-[clamp(1.4rem,2.4vw,1.6rem)] mb-2 lg:leading-none tracking-wider">
-            You are coding
+            You are playing
           </p>
           <h1 className="text-white font-oswald font-light uppercase tracking-[-0.03em] text-[clamp(2.2rem,5vw,3.5rem)] leading-[0.85] stanley-title">
-            The Stanley Parable
+            The Afton Parable
           </h1>
         </div>
 
@@ -114,12 +114,8 @@ export default function Portfolio() {
       {/* Mobile warning overlay */}
       <div className="md:hidden fixed inset-0 z-50 bg-black text-white flex items-center justify-center px-8 text-center">
         <p className="text-[clamp(1rem,2.5vw,1.5rem)] font-semibold leading-snug">
-          Stanley attempted to evaluate a complex logical statement.
-          <br />
-          Unfortunately, his screen was far too small to contain both truth and falsehood
-          simultaneously.
-          <br />
-          Perhaps next time, Stanley will try a proper monitor.
+          The Afton Parable experience is best enjoyed on a larger screen. <br/> Please visit
+          this portfolio on a desktop or laptop computer.
         </p>
       </div>
 

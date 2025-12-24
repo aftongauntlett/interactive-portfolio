@@ -13,27 +13,27 @@ export default function NarratorOverlay() {
   // Define narrator sequences for each phase
   const narratorSequences: Record<string, string[]> = {
     'phone-active': [
-      'Ah, Stanley. So good of you to finally pick up the phone.',
-      "I do hope you're prepared for what promises to be... an enlightening experience.",
-      'You see, Stanley, we need to assess your... capabilities.',
+      'This is the story of a girl named Afton.',
+      "Afton worked for a company in a big building where she was employee #428",
+      'Employee # 428’s job was simple, she sat at her desk in room 428 and he pushed buttons on a keyboard.',
     ],
     'monitor-active': [
-      'Stanley stared at his monitor, which had mysteriously come to life.',
-      'Perhaps now he could demonstrate the extent of his... programming prowess.',
+      'Orders came to her through a monitor on her desk, telling her what buttons to push, how long to push them, and in what order.',
+      'This is what employee 428 did every day of every month of every year, and although others might have considered it soul rending, Afton relished every moment that the orders came in, as though she had been made exactly for this job.',
     ],
     'terminal-breakout': [
-      'What... what are you doing, Stanley?',
-      'That terminal is supposed to stay INSIDE the monitor!',
-      "How did you... that's not how computers work!",
-      "Never mind. We don't have time for this nonsense.",
+      'TBD: Narrator text for terminal breakout phase.',
+      'TBD: Narrator text for terminal breakout phase.',
+      "TBD: Narrator text for terminal breakout phase.",
+      "TBD: Narrator text for terminal breakout phase.",
     ],
     'terminal-restore': [
-      'Finally! Stanley put the terminal back where it belongs.',
-      "Though I suspect he'll do something equally ridiculous momentarily.",
+      'TBD: Narrator text for terminal restore phase.',
+      "TBD: Narrator text for terminal restore phase.",
     ],
     'settings-active': [
-      "Oh, how delightful! Stanley simply couldn't resist the allure of a settings menu.",
-      "It's almost as if he finds genuine pleasure in adjusting sliders that may or may not do anything at all.",
+      "TBD: Narrator text for settings phase.",
+      "TBD: Narrator text for settings phase.",
     ],
   };
 

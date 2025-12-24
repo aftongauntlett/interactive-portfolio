@@ -22,7 +22,7 @@ interface UserProgress {
 
 /**
  * Main experience state interface
- * Manages the Room 427 Stanley Parable portfolio experience
+ * Manages the Room 428 Stanley Parable portfolio experience
  */
 interface SimulationState {
   // Current experience phase
