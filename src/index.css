@@ -1,103 +1,27 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* ===========================
-   GLOBAL BASE STYLES  
-   =========================== */
-
 html,
 body {
-  background-color: black;
-  color: white;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #0b0f14;
+  color: #e6edf3;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+.home {
   min-height: 100vh;
-  width: 100%;
-  overflow-x: hidden;
+  display: grid;
+  place-items: center;
+  padding: 24px;
 }
 
-/* ===========================
-   CUSTOM FORM CONTROLS
-   =========================== */
-
-/* === Universal range styles === */
-input[type='range'] {
-  appearance: none;
-  background: transparent;
-  width: 100%;
-  height: 2rem; /* add vertical space for thumb */
-  cursor: pointer;
-}
-
-/* === Chrome / Safari (Webkit) === */
-input[type='range']::-webkit-slider-runnable-track {
-  height: 12px;
-  background: linear-gradient(
-    to right,
-    #facc15 var(--tw-range-fill, 50%),
-    #444 var(--tw-range-fill, 50%)
-  );
-  border: 1px solid #222;
-}
-
-input[type='range']::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 22px;
-  width: 10px;
-  background: white;
-  border: 2px solid black;
-  border-radius: 9999px;
-  margin-top: -7px;
-  position: relative;
-  z-index: 10;
-}
-
-/* === Firefox (Gecko) === */
-input[type='range']::-moz-range-track {
-  height: 12px;
-  background: linear-gradient(
-    to right,
-    #facc15 var(--tw-range-fill, 50%),
-    #444 var(--tw-range-fill, 50%)
-  );
-  border: 1px solid #222;
-}
-
-input[type='range']::-moz-range-thumb {
-  height: 22px;
-  width: 10px;
-  background: white;
-  border: 2px solid black;
-  border-radius: 9999px;
-  cursor: grab;
-}
-
-/* Global scrollbar override */
-.scrollbar-hide {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
-}
-
-.scrollbar-hide::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
-}
-
-/* Custom terminal scrollbar */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 3px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbar-thumb, #33ff33);
-  border-radius: 3px;
-  box-shadow: 0 0 3px var(--scrollbar-glow, #33ff33);
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background-color: var(--scrollbar-thumb-hover, #44ff44);
-  box-shadow: 0 0 5px var(--scrollbar-glow, #33ff33);
+.home__title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.04em;
 }

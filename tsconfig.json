@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
-    "types": ["@react-spring/three"],
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -14,11 +13,11 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
-    
+
     /* Linting */
     "strict": true,
     "noFallthroughCasesInSwitch": true,
-    
+
     /* Path aliases */
     "baseUrl": ".",
     "paths": {

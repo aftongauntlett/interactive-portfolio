@@ -1,10 +1,5 @@
-import Portfolio from './pages/Portfolio';
-import ErrorBoundary from './components/shared/ErrorBoundary';
+import Home from "./pages/Home";
 
 export default function App() {
-  return (
-    <ErrorBoundary>
-      <Portfolio />
-    </ErrorBoundary>
-  );
+  return <Home />;
 }
